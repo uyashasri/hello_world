@@ -1,0 +1,44 @@
+<DOCTYPE HTML>
+<html ng-app="helloWorldApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<h1>
+    hello world!!!
+</h1>
+
+<head>
+<style>
+body {
+    background-color:lightblue;
+}
+
+
+            table, th, td {
+                padding: 5px;
+                border: 1px solid black;
+            }
+
+
+    </style>
+</head>
+
+<body ng-controller="HelloWorldController">
+    <table>
+
+          <tr ng-repeat="countries">
+            <th>{{country.country code}}</th>
+            <th>{{country.english_name}}</th>
+            <th>{{country.french_name}}</th>
+          </tr>
+
+    </table>
+<script type="text/javascript" src="hello_world.js">
+
+</script>
+
+</body>
+
+
+
+</html>
+
+

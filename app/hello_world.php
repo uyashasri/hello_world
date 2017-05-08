@@ -15,6 +15,6 @@ if (!$result) {
 
 $arr = pg_fetch_all($result);
 
-print_r($arr);
+return json_encode($arr);
 
 ?>

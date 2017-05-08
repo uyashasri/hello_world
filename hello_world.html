@@ -24,8 +24,8 @@ body {
 <body ng-controller="HelloWorldController">
     <table>
 
-          <tr ng-repeat="countries">
-            <th>{{country.country code}}</th>
+          <tr ng-repeat="country in countries">
+            <th>{{country.code}}</th>
             <th>{{country.english_name}}</th>
             <th>{{country.french_name}}</th>
           </tr>

@@ -1,8 +1,9 @@
-angular.module('helloWorldApp').
- controller('HelloWorldController' , ['$http', function HelloWorldController ($http) {
+angular.module('helloWorldApp', []).
+ controller('HelloWorldController', ['$scope', '$http', function HelloWorldController ($scope, $http) {
 
-    $http.get('yash.dev.hello-world.com/hello-world.php').then(function(response) {
+    $http.get('http://yash.dev.hello-world.com/hello_world.php').then(function(response) {
         $scope.countries = response.data;
+        console.log($scope.countries);
     });
 }]);
 

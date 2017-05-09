@@ -3,17 +3,18 @@ angular.module('helloWorldApp', []).
 
     $http.get('http://yash.dev.hello-world.com/hello_world.php').then(function(response) {
         $scope.countries = response.data;
-        console.log($scope.countries);
     });
+
+    var rows = document.getElementsByTagName('tr');
+
+    var colorArray = ['green', 'yellow']
+    for (var rowKey = 1; rowKey < rows.length; rowKey++) {
+        rows[rowKey].style.backgroundColor = colorArray[rowKey];
+    }
 }]);
 
 
 
 
 
-// var rows = document.getElementsByTagName('tr');
 
-// var colorArray = ['', 'blue', 'green', 'red', 'yellow', 'orange']
-// for (var rowKey = 1; rowKey < rows.length; rowKey++) {
-//     rows[rowKey].style.backgroundColor = colorArray[rowKey];
-// }

@@ -1,65 +1,60 @@
 <DOCTYPE HTML>
-<html>
-
+<html ng-app="helloWorldApp">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <h1>
     hello world!!!
 </h1>
 
 <head>
 <style>
-body {
-    background-color:lightblue;
-}
 
+    body {
+        background-color:lightblue;
+        margin:0 auto;
+        text-align: center;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
 
-            table, th, td {
-                padding: 5px;
-                border: 1px solid black;
-            }
+    }
 
+    html {
+        text-align: center;
+    }
 
-    </style>
+    table{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    table, th, td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    .even {
+       background-color: #ccc;
+    }
+    .odd {
+        background-color: #333;
+    }
+
+</style>
+
 </head>
 
-<body>
-    <table>
+<body ng-controller="HelloWorldController">
 
-          <tr id="row1">
-            <th>country code</th>
-            <th>english_name</th>
-            <th>french_name</th>
-          </tr>
-           <tr id="row2">
-            <td>AD</td>
-            <td>Andorra</td>
-            <td>Andorre</td>
-          </tr>
-          <tr id="row3">
-            <td>AE</td>
-            <td>United Arab Emirates</td>
-            <td>ƒmirats arabes unis</td>
-          </tr>
-           <tr id="row4">
-            <td>AF</td>
-            <td>Afghanistan</td>
-            <td>Afghanistan</td>
-          </tr>
-           <tr>
-              </tr>
-           <tr id="row5">
-            <td>AG</td>
-            <td>Antigua and Barbuda</td>
-            <td>Antigua-et-Barbuda</td>
-          </tr>
-           <tr id="row6">
-            <td>AI</td>
-            <td>Anguilla</td>
-            <td>Anguilla</td>
+    <table>
+          <tr ng-repeat="country in countries" ng-class-odd="'odd'" ng-class-even="'even'">
+            <th>{{country.code}}</th>
+            <th>{{country.english_name}}</th>
+            <th>{{country.french_name}}</th>
           </tr>
     </table>
-<script type="text/javascript" src="hello_world.js">
 
-</script>
+    <script type="text/javascript" src="hello_world.js"></script>
 
 </body>
 

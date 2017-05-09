@@ -7,7 +7,7 @@ if (!$conn) {
     exit;
 }
 
-$result = pg_query($conn, "SELECT english_name FROM country");
+$result = pg_query($conn, "SELECT * FROM country");
 if (!$result) {
     echo "An error occurred.\n";
     exit;
@@ -15,6 +15,6 @@ if (!$result) {
 
 $arr = pg_fetch_all($result);
 
-print_r($arr);
+echo json_encode($arr);
 
 ?>

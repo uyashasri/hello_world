@@ -31,13 +31,7 @@
     table, th, td {
         padding: 5px;
         border: 1px solid black;
-    }
 
-    .even {
-       background-color: #ccc;
-    }
-    .odd {
-        background-color: #333;
     }
 
 </style>
@@ -47,7 +41,7 @@
 <body ng-controller="HelloWorldController">
 
     <table>
-          <tr ng-repeat="country in countries" ng-class-odd="'odd'" ng-class-even="'even'">
+          <tr ng-repeat="country in countries" ng-style="{'background-color': country.backgroundColor}">
             <th>{{country.code}}</th>
             <th>{{country.english_name}}</th>
             <th>{{country.french_name}}</th>

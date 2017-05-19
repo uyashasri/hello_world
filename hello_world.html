@@ -1,58 +1,56 @@
-<DOCTYPE HTML>
 <html ng-app="helloWorldApp">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<h1>
-    hello world!!!
-</h1>
 
-<head>
-<style>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
 
-    body {
-        background-color:lightblue;
-        margin:0 auto;
-        text-align: center;
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
+    <head>
+    <style>
 
-    }
+            body {
+                background-color:lightblue;
+                margin:0 auto;
+                text-align: center;
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
 
-    html {
-        text-align: center;
-    }
+            }
 
-    table{
-        width: 80%;
-        margin-right: auto;
-        margin-left: auto;
-    }
+            html {
+                text-align: center;
+            }
 
-    table, th, td {
-        padding: 5px;
-        border: 1px solid black;
+            table{
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
 
-    }
+            table, th, td {
+                padding: 5px;
+                border: 1px solid black;
 
-</style>
+             }
 
-</head>
+    </style>
+    <body>
 
-<body ng-controller="HelloWorldController">
+        <script type="text/ng-template" id="temp1.html">
+            <table>
+                <tr ng-repeat="country in countries" ng-style="{'background-color': country.backgroundColor}">
+                    <th>{{country.code}}</th>
+                    <th>{{country.english_name}}</th>
+                    <th>{{country.french_name}}</th>
+                  </tr>
+            </table>
+        </script>
 
-    <table>
-          <tr ng-repeat="country in countries" ng-style="{'background-color': country.backgroundColor}">
-            <th>{{country.code}}</th>
-            <th>{{country.english_name}}</th>
-            <th>{{country.french_name}}</th>
-          </tr>
-    </table>
+        <div>
+            <hello-world reverse=true></hello-world>
+        </div>
 
-    <script type="text/javascript" src="hello_world.js"></script>
+        <script type="text/javascript" src="hello_world.js"></script>
 
-</body>
-
-
+    </body>
 
 </html>
 
